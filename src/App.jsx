@@ -3,12 +3,19 @@ import { MyContext } from './assets/store/Context'
 import UseContextHook from './assets/component/UseContextHook'
 import "./app.css"
 import UseReducerHook from './assets/component/UseReducerHooks'
+import UseCallbackHook from './assets/component/UseCallbackHook'
+import UseEffectHook from './assets/component/UseEffectHook'
 
 
 
 function App() {
   const [count, setCount] = useState(0)
   const [shoeReducer, setShoeReducer] = useState(false);
+  // got to setUseCallbackHook file
+  const [useCallbackHook, setUseCallbackHook] = useState(false)
+  const [useEffectHook, setUseEffectHook] = useState(false)
+
+ 
 
   const useContextHookObj = {
     counter: count,
@@ -24,6 +31,30 @@ function App() {
     setShoeReducer(false)
   }
 
+  // got to callback hook 
+   function goToCallbackHook() {
+    setUseCallbackHook(true)
+  }
+  if (useCallbackHook) {
+    return (
+      <>
+        <UseCallbackHook />
+      </>
+    )
+  }
+
+    // got to go To UseEffect hook file 
+   function goToUseEffect() {
+    setUseEffectHook(true)
+  }
+  if (useEffectHook) {
+    return (
+      <>
+       
+        <UseEffectHook />
+      </>
+    )
+  }
   return (
 
     // <MyContext.Provider value={{ count, setCount }}  >
@@ -31,11 +62,8 @@ function App() {
 
       {shoeReducer ? (
         <>
-
           {shoeReducer && <UseReducerHook />}
-            <button onClick={goBack}>back to the page </button>
-
-
+          <button onClick={goBack}>back to the page </button>
         </>
       ) : (
         <>
@@ -45,6 +73,8 @@ function App() {
 
           <UseContextHook />
           <button onClick={reducerFuntion}>go to reducer file</button>
+          <button onClick={goToUseEffect}>go to useEffect file</button>
+          <button onClick={goToCallbackHook}>go to callback hook file</button>
         </>
       )}
     </MyContext.Provider>

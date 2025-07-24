@@ -39,7 +39,7 @@ export default function UseContextHook() {
         <div>
             <h1>use the hook use Context {counter}</h1>
             <h2>{counter}</h2>
-            <button onClick={() => setCounter(prev => prev + 1)}>add count </button>
+            <button onClick={() => setCounter(prev => prev + 1)}>add count in context file</button>
         </div>
     )
 }

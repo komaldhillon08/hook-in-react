@@ -22,10 +22,14 @@ export default function UseEffectHook() {
     )
 } */
 import { useEffect, useState } from "react"
+import UseCallbackHook from "./UseCallbackHook"
 
 export default function UseEffectHook() {
 
     const [date, setDate] = useState(0)
+
+   
+
 
     useEffect(() => {
         setInterval(() => {
@@ -40,6 +44,8 @@ export default function UseEffectHook() {
             <h3 className="heading-effect">this is useEffec Hook file</h3>
             <h2>count : {date}</h2>
 
+
+            
         </>
     )
 }
