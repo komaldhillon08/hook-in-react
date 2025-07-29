@@ -1,4 +1,4 @@
-import { useCallback, useState , memo} from "react"
+import { useCallback, useState, memo } from "react"
 
 // create components start
 const Button = memo(function Button({ onclick, children }) {
@@ -21,14 +21,15 @@ export default function UseCallbackHook() {
         console.log(" inside  increment>>>>>>>>>>> + 1");
         setCount((prev) => prev + 1)
 
-    }, [] )
+    }, [])
     const decrement = useCallback(() => {
         console.log(" inside  decrement>>>>>>>>>>> + 1");
         setCount((prev) => prev - 1)
-    },[]);
+    }, []);
 
 
 
+    console.log("check>>>>>>>>> UseCallbackHook ");
 
     return (
         <>

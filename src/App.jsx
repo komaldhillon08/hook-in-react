@@ -15,7 +15,7 @@ function App() {
   const [useCallbackHook, setUseCallbackHook] = useState(false)
   const [useEffectHook, setUseEffectHook] = useState(false)
 
- 
+
 
   const useContextHookObj = {
     counter: count,
@@ -32,7 +32,7 @@ function App() {
   }
 
   // got to callback hook 
-   function goToCallbackHook() {
+  function goToCallbackHook() {
     setUseCallbackHook(true)
   }
   if (useCallbackHook) {
@@ -43,14 +43,13 @@ function App() {
     )
   }
 
-    // got to go To UseEffect hook file 
-   function goToUseEffect() {
+  // got to go To UseEffect hook file 
+  function goToUseEffect() {
     setUseEffectHook(true)
   }
   if (useEffectHook) {
     return (
       <>
-       
         <UseEffectHook />
       </>
     )

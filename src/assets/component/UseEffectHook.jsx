@@ -22,14 +22,8 @@ export default function UseEffectHook() {
     )
 } */
 import { useEffect, useState } from "react"
-import UseCallbackHook from "./UseCallbackHook"
-
 export default function UseEffectHook() {
-
     const [date, setDate] = useState(0)
-
-   
-
 
     useEffect(() => {
         setInterval(() => {
@@ -38,6 +32,8 @@ export default function UseEffectHook() {
         }, 1000)
 
     }, [])
+    console.log("check>>>>>>>>>>  UseEffectHook");
+
 
     return (
         <>
@@ -45,7 +41,7 @@ export default function UseEffectHook() {
             <h2>count : {date}</h2>
 
 
-            
+
         </>
     )
 }

@@ -34,7 +34,9 @@ import { useContext } from "react"
 import { MyContext } from "../store/Context"
 
 export default function UseContextHook() {
-    const { counter , setCounter } = useContext(MyContext)
+    const { counter, setCounter } = useContext(MyContext)
+    console.log("check>>>>>>>>> UseContextHook ");
+
     return (
         <div>
             <h1>use the hook use Context {counter}</h1>
